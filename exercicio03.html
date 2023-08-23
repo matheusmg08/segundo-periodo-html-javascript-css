@@ -1,30 +1,38 @@
+<!-- 3- Uma nutricionista está tendo dificuldade em calcular o peso ideal de seus pacientes. Para
+solucionar este problema vamos desenvolver um programa que receba a altura do paciente, e
+mostre o seu peso ideal utilizando a seguinte equação:
+(Altura*Altura) * 25 -->
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Nome e idade</title>
+        <title>Exercício 3</title>
     </head>
     <body>
-        Digite seu nome:
-        <input type="text" id="texto1"/><br/><br/>
-        Digite seu ano de nascimento:
-        <input type="text" id="texto2"/><br/><br/>
-        <input type="button" value="Frase" onclick="calcular()"/><br/><br/>
+        Digite sua altura:
+        <input type="number" id="txt1"><br/><br/>
+        <input type="button" value="Peso ideal" onclick="calcular()"><br/><br/>
+        <input type="button" value="Limpar" onclick="limpar()"><br/><br/>
         <div id="resp"></div>
     </body>
     <script>
         function calcular(){
-            //pega elementos
-            var nome = document.getElementById("texto1");
-            var ano = document.getElementById("texto2");
+            var t1 = document.getElementById("txt1");
             var r = document.getElementById("resp");
-            //pega valores
-            var n1 = (nome.value);
-            var n2 = parseInt(ano.value);
-            //calcular
-            var soma = (2023 - n2);
-            //mostra o resultado
-            r.innerHTML = "Olá " + n1 + ", " + "você tem " + soma + " anos."
+            var n1 = parseFloat(t1.value);
+            var soma = n1 * n1 * 25;
+            r.innerHTML = "O peso ideal é " + soma.toFixed(2);         
         }
-        
+        function limpar(){
+            var t1 = document.getElementById("txt1");
+            var r = document.getElementById("resp");
+            //limpa os campos
+            t1.value = "";
+            resp.innerHTML = "";
+            //coloca o foco no input
+            t1.focus()
+        }
     </script>
+
+
+
 </html>

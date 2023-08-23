@@ -1,34 +1,46 @@
-<!--Peça para o usuário digitar a largura e altura de um retangulo. Calcule e mostre sua área (largura * altura)-->
+<!--2 - Em uma corrida automobilística, o grid de largada é determinado pelo tempo médio em
+que o piloto leva para efetuar cada volta no circuito. Considerando que o piloto fará 3 voltas, mostre o tempo total gasto e a média de tempo entre as voltas -->
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Área</title>
+        <title>Exercício 2</title>
     </head>
     <body>
-        <h1>Calculando Área</h1>
-        Largura:
-        <input type="text" id="larg"/><br/><br/>
-        Altura:
-        <input type="text" id="alt"/><br/><br/>
-        <input type="button" value="calcular" onclick="calcular()"/>
-        <div id="resp"></div><br/><br/>
+        Digite o tempo da primeira volta:
+        <input type="number" id="txt1"><br/><br/>
+        Digite o tempo da segunda volta:
+        <input type="number" id="txt2"><br/><br/>
+        Digite o tempo da terceira volta:
+        <input type="number" id="txt3"><br/><br/>
+        <input type="button" value="Tempo total" onclick="calcular()"><br/><br/>
+        <input type="button" value="Média de tempo" onclick="calcular2()"><br/><br/>
+        <div id="resp"></div>
+        <div id="resp2"></div>
     </body>
     <script>
         function calcular(){
-            //pega elementos
-            var l = document.getElementById("larg");
-            var a = document.getElementById("alt");
-            var r = document.getElementById("resp")
-            //pega valores
-            var l1 = parseFloat(l.value);
-            var a1 = parseFloat(a.value);
-            //calcular
-            var area = (l1 * a1)
-            //mostra o resultado
-            r.innerHTML = "Área: " + area.toFixed(2);
-
-
+            var t1 = document.getElementById("txt1");
+            var t2 = document.getElementById("txt2");
+            var t3 = document.getElementById("txt3");
+            var r = document.getElementById("resp");
+            var n1 = parseFloat(t1.value);
+            var n2 = parseFloat(t2.value);
+            var n3 = parseFloat(t3.value);
+            var soma = n1 + n2 + n3;
+            r.innerHTML = "O tempo total gasto foi de: " + soma;
         }
+        function calcular2(){
+            var t1 = document.getElementById("txt1");
+            var t2 = document.getElementById("txt2");
+            var t3 = document.getElementById("txt3");
+            var r2 = document.getElementById("resp2");
+            var n1 = parseFloat(t1.value);
+            var n2 = parseFloat(t2.value);
+            var n3 = parseFloat(t3.value);
+            var soma2 = (n1 + n2 + n3) / 3;
+            r2.innerHTML = "A média foi de: " + soma2;
+        }
+       
+
     </script>
 </html>
-
