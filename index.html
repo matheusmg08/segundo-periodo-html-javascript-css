@@ -1,34 +1,86 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Teste de Cores</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8"/>
+        <title>Exercíco 1</title>
     </head>
     <body>
-        <h1 class="titulo">Paleta de Cores</h1>
-        <div class="bordavazada" id="bordavazada"></div>
-        <div class="coloridos">
-            <div class="bordavermelha" onclick="vermelho()"></div>
-            <div class="bordaamarela" onclick="amarelo()"></div>
-            <div class="bordaverde" onclick="verde()"></div>
-            <div class="bordaazul" onclick="azul()"></div>
-            <div class="bordapreta" onclick="preto()"></div>
-        </div>      
+        <div class="container">
+            <h2>Telefone:</h2>
+            <input type="text" id="numeros">
+            <table>
+                <tr>
+                    <td><input class="botao" type="button" value="1" onclick="numero_um()"/></td>
+                    <td><input class="botao" type="button" value="2" onclick="numero_dois()"/></td>
+                    <td><input class="botao" type="button" value="3" onclick="numero_tres()"/></td>
+                </tr>
+                <tr>
+                    <td><input class="botao" type="button" value="4" onclick="numero_quatro()"/></td>
+                    <td><input class="botao" type="button" value="5" onclick="numero_cinco()"/></td>
+                    <td><input class="botao" type="button" value="6" onclick="numero_seis()"/></td>
+                </tr>
+                <tr>
+                    <td><input class="botao" type="button" value="7" onclick="numero_sete()"/></td>
+                    <td><input class="botao" type="button" value="8" onclick="numero_oito()"/></td>
+                    <td><input class="botao" type="button" value="9" onclick="numero_nove()"/></td>
+                </tr>
+                <tr>
+                    <td><input class="botao" type="button" value="*" onclick="asterisco()"/></td>
+                    <td><input class="botao" type="button" value="0" onclick="numero_zero()"/></td>
+                    <td><input class="botao" type="button" value="#" onclick="rashtag()"/></td>
+                </tr>
+            </table>
+        </div>
     </body>
     <script>
-        function vermelho() {
-            document.getElementById("bordavazada").style.background = "red";
+        function numero_um(){
+            var txt = document.getElementById("numeros")
+            txt.value = txt.value+"1";
         }
-        function amarelo() {
-            document.getElementById("bordavazada").style.background = "yellow";
+        function numero_dois(){
+            var txt = document.getElementById("numeros")
+            txt.value = txt.value+"2";
         }
-        function verde() {
-            document.getElementById("bordavazada").style.background = "green";
+        function numero_tres(){
+            var txt = document.getElementById("numeros")
+            txt.value = txt.value+"3";
         }
-        function azul() {
-            document.getElementById("bordavazada").style.background = "blue";
+        function numero_quatro(){
+            var txt = document.getElementById("numeros")
+            txt.value = txt.value+"4";
         }
-        function preto() {
-            document.getElementById("bordavazada").style.background = "black";
+        function numero_cinco(){
+            var txt = document.getElementById("numeros")
+            txt.value = txt.value+"5";
+        }
+        function numero_seis(){
+            var txt = document.getElementById("numeros")
+            txt.value = txt.value+"6";
+        }
+        function numero_sete(){
+            var txt = document.getElementById("numeros")
+            txt.value = txt.value+"7";
+        }
+        function numero_oito(){
+            var txt = document.getElementById("numeros")
+            txt.value = txt.value+"8";
+        }
+        function numero_nove(){
+            var txt = document.getElementById("numeros")
+            txt.value = txt.value+"9";
+        }
+        function asterisco(){
+            var txt = document.getElementById("numeros")
+            txt.value = txt.value+"*";
+        }
+        function numero_zero(){
+            var txt = document.getElementById("numeros")
+            txt.value = txt.value+"0";
+        }
+        function rashtag(){
+            var txt = document.getElementById("numeros")
+            txt.value = txt.value+"#";
         }
     </script>
 </html>
